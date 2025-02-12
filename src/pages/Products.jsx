@@ -1,0 +1,42 @@
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router'
+import './products.css'
+import Home from './Home';
+
+function Products() {
+    const params = useParams();
+    const [product, setProduct] = useState();
+
+    async function fetchProduct() {
+        const respuesta = await fetch("https://fakestoreapi.com/products/" + params.id);
+        const json = await respuesta.json();
+    
+        setProduct(json);
+    }
+    useEffect(() =>{
+          fetchProduct()
+        }, [])
+      
+    if (product == undefined) return <p>Producto no encontrado</p>
+  return (
+    <div className='producto'>
+      <Link to={"/"}>
+      <img src="/volver.png" className='icono'/>
+      </Link>
+      <h1>Producto</h1>
+      <hr />
+      <div className="titulo">
+      <img src={product.image} className='img'/>
+      <div className="data">
+      <h2>{product.title}</h2>
+      <span>${product.price}</span>
+      </div>
+      </div>
+      <hr />
+      <p>{product.description}</p>
+      <button type="submit">Agregar al carrito</button>
+    </div>
+  )
+}
+
+export default Products
