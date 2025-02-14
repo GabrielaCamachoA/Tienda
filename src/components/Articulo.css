@@ -1,84 +1,95 @@
-main{
-    max-width: 900px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px auto;
-    gap: 30px;
-  }
-  .tarjeta{
-    width: 380px;
-    display: flex; 
-    justify-content: center;
-    box-shadow:-6px 8px 7px 0px #253042;
-    border-radius: 8px;
-    background-color: #fff;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-  .info{
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px;
-    gap: 10px;
-    background-color: #E5E5ED;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-    max-width: 400px;
-    flex-basis: 200px;
-    flex-grow: 1;
-  }
-  .tarjeta img{
-    width: 80px;
-    margin: 30px;
-    object-fit: contain;
-  }
-  .botones{
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-  }
-  .details{
-    padding: 4px;
-    background-color: #a87b4a;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: .4s;
-    text-decoration: none;
-  }
-  .details:hover{
-    background-color: #8f653a;
-  }
-  .botones button[type="submit"]{
-    border: none;
-    padding: 4px;
-    background-color: #253042;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: .4s;
-  }
-  .botones button[type="submit"]:hover{
-    background-color: #40454e;
-  }
-  h3{
-    font-weight: 400;
-    overflow: hidden;
-    height: 2rem;
-    text-overflow: ellipsis;
-    font-size: 1.5rem;
-    width: 100%;
-    line-break: anywhere;
-  }
-  .price{
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .descp{
-    height: 100px;
-    overflow: hidden;
-    mask: linear-gradient(black, transparent);
-    word-break: break-all;
-    font-size: 14px;
-  }
+main {
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 30px;
+}
+
+.tarjeta {
+  width: 380px;
+  display: flex;
+  justify-content: center;
+  box-shadow: -6px 8px 7px 0px #253042;
+  border-radius: 8px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  gap: 10px;
+  background-color: #E5E5ED;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  max-width: 400px;
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+
+.tarjeta img {
+  width: 80px;
+  margin: 30px;
+  object-fit: contain;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.details {
+  padding: 4px;
+  background-color: #a87b4a;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .4s;
+  text-decoration: none;
+}
+
+.details:hover {
+  background-color: #8f653a;
+}
+
+.botones button[type="submit"] {
+  border: none;
+  padding: 4px;
+  background-color: #253042;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.botones button[type="submit"]:hover {
+  background-color: #40454e;
+}
+
+h3 {
+  font-weight: 400;
+  overflow: hidden;
+  height: 2rem;
+  text-overflow: ellipsis;
+  font-size: 1.5rem;
+  width: 100%;
+  line-break: anywhere;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.descp {
+  height: 100px;
+  overflow: hidden;
+  mask: linear-gradient(black, transparent);
+  word-break: break-all;
+  font-size: 14px;
+}
