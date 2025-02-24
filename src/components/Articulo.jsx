@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Articulo.css'
 import { Link } from 'react-router'
+import { carritoContext } from '../context/useCarrito'
 
 function Articulo({image,title,price, description, id}) {
+  const {insertProduct} = useContext(carritoContext)
+
   return (
     <div className='tarjeta'>
         <img src={image} alt="" />
@@ -12,7 +15,7 @@ function Articulo({image,title,price, description, id}) {
         <p className='descp'>{description}</p>
         <div className="botones">
            <Link className='details' to={`/products/${id}`}>Detalles</Link>
-            <button type="submit">Agregar al carrito</button>
+            <button onClick={() => insertProduct({image,title,price, description, id})}>Agregar al carrito</button>
         </div>
         </div>
     </div>

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import './products.css'
+import { carritoContext } from '../context/useCarrito';
 
 function Products() {
   const params = useParams();
+  const {insertProduct} = useContext(carritoContext)
   const [product, setProduct] = useState();
 
   async function fetchProduct() {
@@ -34,7 +36,7 @@ function Products() {
       </div>
       <hr />
       <p>{product.description}</p>
-      <button type="submit">Agregar al carrito</button>
+      <button onClick={() => insertProduct(product)}>Agregar al carrito</button>
     </div>
   )
 }

@@ -1,0 +1,16 @@
+.carta{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 20px;
+    max-width: 240px;
+    border-radius: 12px;
+}
+.carta .data{
+    text-align: center;
+}
+.carta img{
+    object-fit: contain;
+    height: 24vh;
+}
