@@ -19,7 +19,7 @@ function Carrito() {
               </div>
               <div className="botones">
               <Link className='details' to={`/products/${articulo.id}`}>Detalles</Link>
-              <button onClick={() => removeProduct(articulo)}>Eliminar</button>
+              <button onClick={() => removeProduct(index)}>Eliminar</button>
               </div>
             </div>
         })}
