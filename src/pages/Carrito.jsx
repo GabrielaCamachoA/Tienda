@@ -1,11 +1,10 @@
 import React, { useContext } from 'react'
-import { carritoContext } from '../context/useCarrito'
 import './carrito.css'
 import { Link } from 'react-router'
+import { carritoContext } from '../context/ApiContext'
 
 function Carrito() {
-    const {carrito} = useContext(carritoContext)
-    const {removeProduct} = useContext(carritoContext)
+    const {carrito, removeProduct} = useContext(carritoContext)
   return (
     <main>
         {carrito.map((articulo,index ) =>{

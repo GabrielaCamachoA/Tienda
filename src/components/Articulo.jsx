@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import './Articulo.css'
 import { Link } from 'react-router'
-import { carritoContext } from '../context/useCarrito'
+import { carritoContext } from '../context/ApiContext'
+
 
 function Articulo({image,title,price, description, id}) {
   const {insertProduct} = useContext(carritoContext)

@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import './products.css'
-import { carritoContext } from '../context/useCarrito';
+import { carritoContext } from '../context/ApiContext';
+
 
 function Products() {
   const params = useParams();

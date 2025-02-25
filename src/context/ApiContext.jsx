@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 export const carritoContext = createContext(null)
 
-function UseCarrito({children}) {
+function ApiContext({children}) {
     const [carrito, setCarrito] = useState([])
 
     function insertProduct(product) {
@@ -23,4 +23,4 @@ function UseCarrito({children}) {
   )
 }
 
-export default UseCarrito
+export default ApiContext
